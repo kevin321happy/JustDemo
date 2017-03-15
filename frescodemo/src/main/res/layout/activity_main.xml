@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/activity_main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/pk_bg"
+  android:gravity="center"
+  tools:context="com.example.frescodemo.MainActivity">
+<!-- fresco:roundAsCircle="false" // 是否是圆形图片。
+  fresco:roundedCornerRadius="1dp" // 四角圆角度数，如果是圆形图片，这个属性被忽略。
+  fresco:roundTopLeft="true" // 左上角是否圆角。
+  fresco:roundTopRight="false" // 右上角是否圆角。
+  fresco:roundBottomLeft="false" // 左下角是否圆角。
+  fresco:roundBottomRight="true" // 左下角是否圆角。
+  fresco:roundingBorderWidth="2dp" // 描边的宽度。
+  fresco:roundingBorderColor="@color/border_color" 描边的颜色。-->
+  <com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/SimpleDraweeView"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    fresco:roundAsCircle="true"
+    fresco:roundingBorderWidth="2dp"
+    fresco:roundingBorderColor="#00ff00"
+    android:src="@mipmap/ic_launcher"/>
+ <!-- fresco:roundAsCircle="true"
+  fresco:roundBorderColor="#00ff00"
+  fresco:roundBorderWidth="3dp"-->
+</LinearLayout>

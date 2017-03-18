@@ -1,4 +1,4 @@
-package com.example.requestspermissionsdemo;
+package com.kevin.myapplication;
 
 import org.junit.Test;
 

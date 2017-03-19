@@ -8,9 +8,13 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
+import com.example.greendaodemo.bean.ActivityEntity;
+import com.example.greendaodemo.bean.CourseEntity;
 import com.example.greendaodemo.bean.StudentEntity;
 import com.example.greendaodemo.bean.UserEntity;
 
+import com.wyk.greendaodemo.greendao.gen.ActivityEntityDao;
+import com.wyk.greendaodemo.greendao.gen.CourseEntityDao;
 import com.wyk.greendaodemo.greendao.gen.StudentEntityDao;
 import com.wyk.greendaodemo.greendao.gen.UserEntityDao;
 
@@ -23,9 +27,13 @@ import com.wyk.greendaodemo.greendao.gen.UserEntityDao;
  */
 public class DaoSession extends AbstractDaoSession {
 
+    private final DaoConfig activityEntityDaoConfig;
+    private final DaoConfig courseEntityDaoConfig;
     private final DaoConfig studentEntityDaoConfig;
     private final DaoConfig userEntityDaoConfig;
 
+    private final ActivityEntityDao activityEntityDao;
+    private final CourseEntityDao courseEntityDao;
     private final StudentEntityDao studentEntityDao;
     private final UserEntityDao userEntityDao;
 
@@ -33,22 +41,42 @@ public class DaoSession extends AbstractDaoSession {
             daoConfigMap) {
         super(db);
 
+        activityEntityDaoConfig = daoConfigMap.get(ActivityEntityDao.class).clone();
+        activityEntityDaoConfig.initIdentityScope(type);
+
+        courseEntityDaoConfig = daoConfigMap.get(CourseEntityDao.class).clone();
+        courseEntityDaoConfig.initIdentityScope(type);
+
         studentEntityDaoConfig = daoConfigMap.get(StudentEntityDao.class).clone();
         studentEntityDaoConfig.initIdentityScope(type);
 
         userEntityDaoConfig = daoConfigMap.get(UserEntityDao.class).clone();
         userEntityDaoConfig.initIdentityScope(type);
 
+        activityEntityDao = new ActivityEntityDao(activityEntityDaoConfig, this);
+        courseEntityDao = new CourseEntityDao(courseEntityDaoConfig, this);
         studentEntityDao = new StudentEntityDao(studentEntityDaoConfig, this);
         userEntityDao = new UserEntityDao(userEntityDaoConfig, this);
 
+        registerDao(ActivityEntity.class, activityEntityDao);
+        registerDao(CourseEntity.class, courseEntityDao);
         registerDao(StudentEntity.class, studentEntityDao);
         registerDao(UserEntity.class, userEntityDao);
     }
     
     public void clear() {
+        activityEntityDaoConfig.clearIdentityScope();
+        courseEntityDaoConfig.clearIdentityScope();
         studentEntityDaoConfig.clearIdentityScope();
         userEntityDaoConfig.clearIdentityScope();
+    }
+
+    public ActivityEntityDao getActivityEntityDao() {
+        return activityEntityDao;
+    }
+
+    public CourseEntityDao getCourseEntityDao() {
+        return courseEntityDao;
     }
 
     public StudentEntityDao getStudentEntityDao() {

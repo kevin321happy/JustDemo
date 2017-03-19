@@ -31,7 +31,7 @@ public class GreenDaoUtils {
   }
 
   private void initGreenDao() {
-    mHelper = new DaoMaster.DevOpenHelper(MyApplication.getApplication(), "imchat-db", null);
+    mHelper = new DaoMaster.DevOpenHelper(MyApplication.getApplication(), "imchat2-db", null);
     db = mHelper.getWritableDatabase();
     mDaoMaster = new DaoMaster(db);
     mDaoSession=mDaoMaster.newSession();

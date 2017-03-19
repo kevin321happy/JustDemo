@@ -1,8 +1,8 @@
 package com.example.greendaodemo.bean;
 
 import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
 
 /**
  * Created by kevin on 2017/3/16. 邮箱：kevin321vip@126.com 公司：锦绣氘(武汉科技有限公司) 实体类
@@ -14,6 +14,7 @@ public class StudentEntity {
   private Long id;
   private String name;
   private int age;
+
   private boolean isBoy;
 
   public boolean getIsBoy() {

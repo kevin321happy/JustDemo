@@ -1,5 +1,6 @@
 package com.example.greendaodemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
   private Button mQue;
   private StudentEntityDao mStudentEntityDao;
   private UserEntityDao mUserEntityDao;
+  private Button jump;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +39,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     mDel = (Button) findViewById(R.id.del);
     mUpdata = (Button) findViewById(R.id.updata);
     mQue = (Button) findViewById(R.id.que);
+    jump = (Button) findViewById(R.id.jump);
 
     mAdd.setOnClickListener(this);
     mDel.setOnClickListener(this);
     mUpdata.setOnClickListener(this);
     mQue.setOnClickListener(this);
+    jump.setOnClickListener(this);
 
     GreenDaoUtils daoUtils = GreenDaoUtils.getInstance();
     DaoSession daoSession = daoUtils.getmDaoSession();
@@ -113,6 +117,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
           Log.i("test", "low出来的吴卫 ：" + studentEntity);
         }
         mStudentEntityDao.deleteInTx(querySutdent.list());
+        break;
+      case R.id.jump:
+        startActivity(new Intent(MainActivity.this,Main2Activity.class));
         break;
     }
   }

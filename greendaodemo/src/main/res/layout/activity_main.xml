@@ -31,4 +31,11 @@
     android:layout_height="wrap_content"
     android:text="差"
     android:textColor="#23b636"/>
+  <Button
+    android:id="@+id/jump"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="跳"
+    android:textColor="#23b636"/>
+
 </LinearLayout>

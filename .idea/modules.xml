@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/greendaodemo/greendaodemo.iml" filepath="$PROJECT_DIR$/greendaodemo/greendaodemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" filepath="$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/permission60/permission60.iml" filepath="$PROJECT_DIR$/permission60/permission60.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
     </modules>
   </component>
 </project>

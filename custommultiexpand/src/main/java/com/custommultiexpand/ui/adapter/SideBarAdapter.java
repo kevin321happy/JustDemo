@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.mrchen.custommultiexpanddemo.R;
-import com.example.mrchen.custommultiexpanddemo.item.SideBarItem;
-import com.example.mrchen.custommultiexpanddemo.utils.DensityUtil;
-
+import com.custommultiexpand.R;
+import com.custommultiexpand.bean.SideBarItem;
+import com.custommultiexpand.utils.DensityUtil;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;

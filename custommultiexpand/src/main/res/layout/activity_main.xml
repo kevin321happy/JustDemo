@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/activity_main" android:layout_width="match_parent" android:layout_height="match_parent"
-  android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin"
-  android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin"
-  tools:context="com.custommultiexpand.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
 
-  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello World!" />
+  <com.custommultiexpand.ui.PagerEnabledSlidingPaneLayout
+    android:id="@+id/spl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+      android:id="@+id/leftfragment"
+      android:layout_width="200dp"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      android:name="com.custommultiexpand.fragment.LeftFragment"></fragment>
+
+    <fragment
+      android:id="@+id/rightfragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:layout_gravity="end"
+      android:name="com.custommultiexpand.fragment.ContentFragment"></fragment>
+  </com.custommultiexpand.ui.PagerEnabledSlidingPaneLayout>
 </RelativeLayout>

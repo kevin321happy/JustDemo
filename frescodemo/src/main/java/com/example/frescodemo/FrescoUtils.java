@@ -26,7 +26,6 @@ public  class FrescoUtils {
 
   /**
    * 设置view大小。
-   *
    * @param view View。
    * @param width 指定宽。
    * @param width 指定高。
@@ -42,7 +41,6 @@ public  class FrescoUtils {
       view.requestLayout();
     }
   }
-
   /**
    * 显示http或者https远程图片。
    * @param draweeView imageView。

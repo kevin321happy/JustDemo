@@ -59,7 +59,6 @@ public class PagerEnabledSlidingPaneLayout extends SlidingPaneLayout {
                 }
             }
         }
-
         return super.onInterceptTouchEvent(ev);
     }
 

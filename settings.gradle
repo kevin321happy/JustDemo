@@ -1,1 +1,1 @@
-include ':app', ':frescodemo', ':animationdemo', ':greendaodemo', ':imagematrixdemo', ':permission60', ':rxjavademo', ':exlistviewdemo', ':checkboxlistview', ':custommultiexpand'
+include ':app', ':frescodemo', ':animationdemo', ':greendaodemo', ':imagematrixdemo', ':permission60', ':rxjavademo', ':exlistviewdemo', ':checkboxlistview', ':custommultiexpand', ':contactslist'

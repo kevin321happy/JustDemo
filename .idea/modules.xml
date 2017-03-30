@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" filepath="$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactslist/contactslist.iml" filepath="$PROJECT_DIR$/contactslist/contactslist.iml" />
       <module fileurl="file://$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" filepath="$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" />
       <module fileurl="file://$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" filepath="$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/frescodemo/frescodemo.iml" filepath="$PROJECT_DIR$/frescodemo/frescodemo.iml" />

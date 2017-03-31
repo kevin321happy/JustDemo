@@ -4,4 +4,11 @@
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
   <color name="colorPink">#ec3b77</color>
+
+  <color name="yellow_page_search_bg">#fffffbfa</color>
+  <color name="black">#ff000000</color>
+  <color name="login_form_hint">#ffb5b5b5</color>
+  <color name="transparent">#00000000</color>
+  <color name="yellow_light">#ffefa717</color>
+  <color name="white">#ffffffff</color>
 </resources>

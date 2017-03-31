@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">ContactsList</string>
+  <string name="school_friend_search_hint">搜索</string>
 </resources>

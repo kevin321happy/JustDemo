@@ -5,8 +5,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build.VERSION_CODES;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -24,15 +22,13 @@ public class SlideBar extends View {
   private TextView mTextDialog;
   private onTouchingLetterChangedListener mOnTouchingLetterChangedListener;
 
+
   //对外提供set方法
   public void setOnTouchingLetterChangedListener(
       onTouchingLetterChangedListener onTouchingLetterChangedListener) {
     mOnTouchingLetterChangedListener = onTouchingLetterChangedListener;
   }
 
-  public void setTextDialog(TextView textDialog) {
-    mTextDialog = textDialog;
-  }
 
   public SlideBar(Context context) {
     this(context, null);
@@ -78,49 +74,55 @@ public class SlideBar extends View {
     }
   }
 
-  //重写事件是否被拦截方法
-  @RequiresApi(api = VERSION_CODES.JELLY_BEAN)
+  @SuppressWarnings("deprecation")
   @Override
   public boolean dispatchTouchEvent(MotionEvent event) {
-    int action = event.getAction();
-    float y = event.getY();
-    int oldchoose = choose;
-    onTouchingLetterChangedListener listener = mOnTouchingLetterChangedListener;
-    int c = (int) (y / getHeight() * b.length);//点击点的y坐标的高度除以总高度得到的比值乘以数组的长度得到的就是点击b中的个数
+    final int action = event.getAction();
+    final float y = event.getY();// 点击y坐标
+    final int oldChoose = choose;
+    final onTouchingLetterChangedListener listener = mOnTouchingLetterChangedListener;
+    final int c = (int) (y / getHeight() * b.length);// 点击y坐标所占总高度的比例*b数组的长度就等于点击b中的个数.
+
     switch (action) {
-      case MotionEvent.ACTION_DOWN:
-        setBackground(new ColorDrawable(0x00000000));
-        choose=-1;
-        invalidate();
-        if (mTextDialog!=null){
-          mTextDialog.setVisibility(VISIBLE);
-        }
-        break;
-      case MotionEvent.ACTION_MOVE:
-        break;
       case MotionEvent.ACTION_UP:
-        break;
-      default:
-        if (oldchoose!=c){
-          if (listener!=null){
-            listener.onTouchingLetterChanged(b[c]);
-          }
-          if (mTextDialog!=null){
-            mTextDialog.setText(b[c]);
-            mTextDialog.setVisibility(VISIBLE);
-          }
-          choose=c;
-          invalidate();
+        setBackgroundDrawable(new ColorDrawable(0x00000000));
+        choose = -1;//
+        invalidate();
+        if (mTextDialog != null) {
+          mTextDialog.setVisibility(View.INVISIBLE);
         }
+        break;
+
+      default:
+        if (oldChoose != c) {
+          if (c >= 0 && c < b.length) {
+            if (listener != null) {
+              listener.onTouchingLetterChanged(b[c]);
+            }
+            if (mTextDialog != null) {
+              mTextDialog.setText(b[c]);
+              mTextDialog.setVisibility(View.VISIBLE);
+            }
+
+            choose = c;
+            invalidate();
+          }
+        }
+
         break;
     }
-
     return true;
-
   }
 
-  private interface onTouchingLetterChangedListener {
+
+  public void setTextView(TextView textView) {
+    mTextDialog = textView;
+  }
+
+  public interface onTouchingLetterChangedListener {
 
     public void onTouchingLetterChanged(String s);
   }
+
+
 }

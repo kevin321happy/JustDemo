@@ -61,7 +61,7 @@ public class SlideBar extends View {
     int itemheight = height / b.length;//每一个子控件的高度
     for (int i = 0; i < b.length; i++) {
       mPaint.setColor(getResources().getColor(R.color.colorPink));
-      mPaint.setTextSize(40);
+      mPaint.setTextSize(20);
       if (i == choose) {
         mPaint.setColor(getResources().getColor(R.color.colorPrimary));
         mPaint.setFakeBoldText(true);//设置加粗
@@ -123,6 +123,4 @@ public class SlideBar extends View {
 
     public void onTouchingLetterChanged(String s);
   }
-
-
 }

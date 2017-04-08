@@ -2,6 +2,7 @@ package com.kevin.contactslist.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.SectionIndexer;
 import android.widget.TextView;
 import com.kevin.contactslist.R;
 import com.kevin.contactslist.bean.PersonDto;
+import com.kevin.contactslist.utils.CharacterParser;
 import java.util.List;
 
 /**
@@ -103,7 +105,10 @@ public class SchoolFriendMemberListAdapter extends BaseAdapter implements Sectio
 	 * 根据ListView的当前位置获取分类的首字母的Char ascii值
 	 */
 	public int getSectionForPosition(int position) {
-		return list.get(position).getSortLetters().charAt(0);
+		char charAt = list.get(position).getName().charAt(0);
+		String firstSpell = CharacterParser.getFirstSpell(String.valueOf(charAt));
+		int chsAscii = CharacterParser.getInstance().getChsAscii(firstSpell.toUpperCase());
+		return chsAscii;
 	}
 
 	/**
@@ -111,9 +116,12 @@ public class SchoolFriendMemberListAdapter extends BaseAdapter implements Sectio
 	 */
 	public int getPositionForSection(int section) {
 		for (int i = 0; i < getCount(); i++) {
-			String sortStr = list.get(i).getSortLetters();
-			char firstChar = sortStr.toUpperCase().charAt(0);
-			if (firstChar == section) {
+			//得到第一个汉字
+			char c = list.get(i).getName().charAt(0);
+			String firstSpell = CharacterParser.getFirstSpell(String.valueOf(c));
+			Log.i("test","转化的到的拼音："+firstSpell);
+			int chsAscii = CharacterParser.getInstance().getChsAscii(firstSpell.toUpperCase());
+			if (chsAscii==section) {
 				return i;
 			}
 		}

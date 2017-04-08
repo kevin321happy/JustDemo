@@ -21,5 +21,4 @@ public class PinyinComparator implements Comparator<PersonDto> {
 			return o1.getSortLetters().compareTo(o2.getSortLetters());
 		}
 	}
-
 }

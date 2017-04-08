@@ -13,6 +13,8 @@
         android:paddingBottom="5dip"
         android:paddingLeft="5dip"
         android:paddingTop="5dip"
+        android:text="X"
+        android:textStyle="bold"
         android:textColor="#454545" />
 
     <TextView

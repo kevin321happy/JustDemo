@@ -62,43 +62,55 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
 
     PersonDto cuser1 = new PersonDto();
     cuser1.setName("蝗虫");
-    cuser1.setSortLetters("h");
+
 
     PersonDto cuser2 = new PersonDto();
     cuser2.setName("贝贝");
-    cuser2.setSortLetters("b");
+
 
     PersonDto cuser3 = new PersonDto();
     cuser3.setName("西西");
-    cuser3.setSortLetters("x");
 
     PersonDto cuser4 = new PersonDto();
     cuser4.setName("楠楠");
-    cuser4.setSortLetters("n");
+
 
     PersonDto cuser5 = new PersonDto();
     cuser5.setName("君君");
-    cuser5.setSortLetters("j");
+
 
     PersonDto cuser6 = new PersonDto();
     cuser6.setName("陈诚");
-    cuser6.setSortLetters("c");
+
 
     PersonDto cuser7 = new PersonDto();
     cuser7.setName("黎星");
-    cuser7.setSortLetters("l");
+
 
     PersonDto cuser8 = new PersonDto();
     cuser8.setName("毒药");
-    cuser8.setSortLetters("d");
+
 
     PersonDto cuser9 = new PersonDto();
     cuser9.setName("道姑");
-    cuser9.setSortLetters("d");
+
 
     PersonDto cuser10 = new PersonDto();
     cuser10.setName("八戒");
-    cuser10.setSortLetters("b");
+
+
+    PersonDto cuser11 = new PersonDto();
+    cuser11.setName("kevin");
+
+    PersonDto cuser12 = new PersonDto();
+    cuser12.setName("sb");
+    PersonDto cuser13 = new PersonDto();
+    cuser13.setName("jake");
+    PersonDto cuser14 = new PersonDto();
+    cuser14.setName("rose");
+    PersonDto cuser15 = new PersonDto();
+    cuser15.setName("robin");
+
 
     sortDataList.add(cuser1);
     sortDataList.add(cuser2);
@@ -110,6 +122,11 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
     sortDataList.add(cuser8);
     sortDataList.add(cuser9);
     sortDataList.add(cuser10);
+    sortDataList.add(cuser11);
+    sortDataList.add(cuser12);
+    sortDataList.add(cuser13);
+    sortDataList.add(cuser14);
+    sortDataList.add(cuser15);
 
     fillData(sortDataList);
     // 根据a-z进行排序源数据
@@ -133,7 +150,7 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
     }
   }
 
-
+  //自定义的EditText的改变监听
   @Override
   public void onTextChanged(CharSequence s, int start, int before, int count) {
     // 当输入框里面的值为空，更新为原来的列表，否则为过滤数据列表
@@ -183,10 +200,8 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
       if (cUserInfoDto != null && cUserInfoDto.getName() != null) {
         String pinyin = characterParser.getSelling(cUserInfoDto.getName());
         String suoxie = CharacterParser.getFirstSpell(cUserInfoDto.getName());
-
         cUserInfoDto.setSuoxie(suoxie);
         String sortString = pinyin.substring(0, 1).toUpperCase();
-
         if ("1".equals(cUserInfoDto.getUtype())) {// 判断是否是管理员
           cUserInfoDto.setSortLetters("☆");
         } else if (sortString.matches("[A-Z]")) {// 正则表达式，判断首字母是否是英文字母
@@ -197,5 +212,4 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
       }
     }
   }
-
 }

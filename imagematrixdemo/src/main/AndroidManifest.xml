@@ -16,6 +16,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".ColorMatrix" />
+    <activity android:name=".PiexControl"/>
   </application>
 
 </manifest>

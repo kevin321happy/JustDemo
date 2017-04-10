@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">ImageMatrixDemo</string>
+  <string name="pix">像素点处理</string>
 </resources>

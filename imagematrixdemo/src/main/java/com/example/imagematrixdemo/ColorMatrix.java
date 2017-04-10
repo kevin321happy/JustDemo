@@ -3,6 +3,9 @@ package com.example.imagematrixdemo;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -67,12 +70,16 @@ public class ColorMatrix extends Activity {
 
   }
 
-  public void btnchange(View view) {
-
+  public void change(View view) {
+    //先获取颜色矩阵的值然后设置到图片
+    getMatrxi();
+    setIamgeMatrxi();
   }
 
-  public void btnreset(View view) {
-
+  public void reset(View view) {
+    initMatrix();
+    getMatrxi();
+    setIamgeMatrxi();
   }
 
   //获取用户设置的值
@@ -84,7 +91,16 @@ public class ColorMatrix extends Activity {
 
   //将矩阵的颜色值设置到图片上面
   private void setIamgeMatrxi() {
-   // Bitmap bitmap=Bitmap.createBitmap(mBitmap.getWidth(),mBitmap.getHeight());
+    Bitmap bitmap = Bitmap.createBitmap(mBitmap.getWidth(), mBitmap.getHeight(), Bitmap.Config.ARGB_8888);
+//    ColorMatrix colorMatrix = new ColorMatrix();
+    android.graphics.ColorMatrix colorMatrix = new android.graphics.ColorMatrix();
+    colorMatrix.set(mColorMatrix);
+    Canvas canvas = new Canvas(bitmap);
+    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
+    canvas.drawBitmap(mBitmap,0,0,paint);
+    iam.setImageBitmap(bitmap);
+    //  colorMatrix.setIamgeMatrxi();
 
   }
 }

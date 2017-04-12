@@ -13,7 +13,6 @@ import android.graphics.Paint;
  */
 
 public  class IamgeHelper {
-
   /**
    * @param hue "色彩的色度
    * @param saturated "饱和

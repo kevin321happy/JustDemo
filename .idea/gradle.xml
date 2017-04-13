@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CommonRecycler" />
             <option value="$PROJECT_DIR$/animationdemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/checkboxlistview" />
@@ -21,6 +22,8 @@
             <option value="$PROJECT_DIR$/permission60" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/rxjavademo" />
+            <option value="$PROJECT_DIR$/仿微信视频拍摄" />
+            <option value="$PROJECT_DIR$/顶部收缩" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" filepath="$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Study.iml" filepath="$PROJECT_DIR$/Study.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
@@ -16,6 +17,8 @@
       <module fileurl="file://$PROJECT_DIR$/permission60/permission60.iml" filepath="$PROJECT_DIR$/permission60/permission60.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" filepath="$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" />
+      <module fileurl="file://$PROJECT_DIR$/顶部收缩/顶部收缩.iml" filepath="$PROJECT_DIR$/顶部收缩/顶部收缩.iml" />
     </modules>
   </component>
 </project>

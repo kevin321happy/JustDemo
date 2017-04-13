@@ -1,6 +1,10 @@
 package com.ffmpeg.demo.widget;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
+import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -42,6 +46,14 @@ public class RecordedButton extends View {
   private float DownX;
   private float DownY;
   private boolean isDeleteMode;
+  private boolean isOpenMode = true;//button是否处于打开的状态
+  private ValueAnimator buttonAnim;
+  private float rawX = -1;
+  private float rawY = -1;
+  /**
+   * getRowX()获得的坐标是以屏幕的左上角为坐标原点的
+   * getX()获取的坐标是以控件自身的左上角坐标为坐标原点的
+   */
   /**
    * 当前进度 以角度为单位
    */
@@ -143,6 +155,7 @@ public class RecordedButton extends View {
 
   private float firstX;
   private float firstY;
+  private boolean cleanResponse;//清除所有响应
 
   /**
    * 触摸监听
@@ -158,15 +171,137 @@ public class RecordedButton extends View {
         }
         break;
       case MotionEvent.ACTION_MOVE:
-        float MoveX=event.getRawX();
-        float MoveY=event.getRawY();
-
-
+        float MoveX = event.getRawX();
+        float MoveY = event.getRawY();
+        if (Math.abs(MoveX - firstY) > dp5 || Math.abs(MoveY - firstY) > dp5) {
+          if (drawHandler.hasMessages(0)) {
+            cleanResponse = true;
+            drawHandler.removeMessages(0);
+          }
+        }
+        //记录偏移量
+        float slideX = MoveX - firstX;
+        float slideY = MoveY - firstY;
+        //设置跟随手指移动
+        setX(getX() + slideX);
+        setY(getY() + slideY);
+        DownX = MoveX;
+        DownY = MoveY;
         break;
       case MotionEvent.ACTION_UP:
+
+        break;
+      //类似up事件,当用户保持按下操作并从控件转移到了外层
+      case MotionEvent.ACTION_CANCEL:
+        float upX = event.getRawX();
+        float upY = event.getRawY();
+
+        if (!cleanResponse) {
+          //如果在长按状态且没有在绘制录制,则关闭开关
+          if (isResponseLongTouch && !drawHandler.hasMessages(0)) {
+            if (isOpenMode) {
+              if (mOnGestureListener != null) {
+                mOnGestureListener.onLift();
+              }
+              closeButton();
+            } else {
+              drawHandler.removeMessages(0);
+              if (Math.abs(upX - firstX) < dp5 && Math.abs(upY - firstY) < 5) {
+                if (mOnGestureListener != null) {
+                  mOnGestureListener.onClick();
+                }
+              }
+            }
+          }
+          cleanResponse = false;
+          if (upX != firstX || upY != firstY) {//回到原坐标
+            startMoveAnim();
+          }
+        }
+
         break;
     }
     return true;
+  }
+
+  //开始移动的动画
+  private void startMoveAnim() {
+
+    final float slideX = rawX - getX();
+    final float slideY = rawY - getY();
+
+    final float rX = getX();
+    final float rY = getY();
+
+    ValueAnimator va = ValueAnimator.ofFloat(0, 1).setDuration(50);
+    va.addUpdateListener(new AnimatorUpdateListener() {
+      @Override
+      public void onAnimationUpdate(ValueAnimator animation) {
+        float value = (float) animation.getAnimatedValue();
+        setX(rX + slideX * value);
+        setY(rY + slideY * value);
+      }
+    });
+
+    va.addListener(new AnimatorListenerAdapter() {
+      @Override
+      public void onAnimationEnd(Animator animation) {
+        super.onAnimationEnd(animation);
+        if (Math.abs(slideX) > Math.abs(slideY)) {
+          jitterAnim(slideX / 5, true);
+        } else {
+          jitterAnim(slideY / 5, false);
+        }
+      }
+    });
+    va.start();
+  }
+
+  private boolean flag;
+
+  //执行震动动画
+  private void jitterAnim(float slide, final boolean isX) {
+    final ValueAnimator va = ValueAnimator.ofFloat(slide, 0).setDuration(100);
+    va.addUpdateListener(new AnimatorUpdateListener() {
+      @Override
+      public void onAnimationUpdate(ValueAnimator animation) {
+        float value = (float) animation.getAnimatedValue();
+        if (flag) {
+          value = -value;
+        }
+        if (isX) {
+          setX(rawX + value);
+        } else {
+          setY(rawY + value);
+        }
+        flag = !flag;
+      }
+    });
+    va.start();
+  }
+
+  //关闭开关
+  private void closeButton() {
+    if (isOpenMode) {
+      isOpenMode = false;
+      startAnim(1 - zoom, 0);
+    }
+
+  }
+
+  //开始执行动画
+  private void startAnim(float start, int end) {
+    if (buttonAnim==null&&!buttonAnim.isRunning()) {
+      buttonAnim=ValueAnimator.ofFloat(start,end).setDuration(animTime);
+      buttonAnim.addUpdateListener(new AnimatorUpdateListener() {
+        @Override
+        public void onAnimationUpdate(ValueAnimator animation) {
+           float value= (float) animation.getAnimatedValue();
+
+        }
+      });
+    }
+
   }
 
   /**

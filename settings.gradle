@@ -1,1 +1,1 @@
-include ':app', ':frescodemo', ':animationdemo', ':greendaodemo', ':imagematrixdemo', ':permission60', ':rxjavademo', ':exlistviewdemo', ':checkboxlistview', ':custommultiexpand', ':contactslist', ':mvp', ':rxjava', ':顶部收缩', ':仿微信视频拍摄', ':CommonRecycler'
+include ':app', ':frescodemo', ':animationdemo', ':greendaodemo', ':imagematrixdemo', ':permission60', ':rxjavademo', ':exlistviewdemo', ':checkboxlistview', ':custommultiexpand', ':contactslist', ':mvp', ':rxjava', ':顶部收缩', ':仿微信视频拍摄', ':CommonRecycler', ':android设备信息', ':getdeviceinfo', ':wechatrecord2.0'

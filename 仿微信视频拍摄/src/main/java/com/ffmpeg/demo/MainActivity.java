@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     sb.append(" -bsf:a");
     sb.append(" aac_adtstoasc");
     sb.append(" -y");
-    String output = RecordedApp.VEDIO_PATH + "/finish.mp4";
+    String output = RecordedApp.VIDEO_PATH + "/finish.mp4";
     sb.append(" " + output);
 
     int i = UtilityAdapter.FFmpegRun("", sb.toString());
@@ -381,7 +381,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
       case R.id.iv_next:
         mRbStart.setDeleteMode(false);
 //        Intent intent = new Intent(MainActivity.this, EditVideoActivity.class);
-//        intent.putExtra("path", MyApplication.VIDEO_PATH+"/finish.mp4");
+//        intent.putExtra("path", RecordedApp.VIDEO_PATH+"/finish.mp4");
 //        startActivityForResult(intent, REQUEST_KEY);
         break;
       case R.id.iv_close:

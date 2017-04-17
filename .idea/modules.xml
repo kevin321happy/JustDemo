@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" filepath="$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" filepath="$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" />
+      <module fileurl="file://$PROJECT_DIR$/接口调试/接口调试.iml" filepath="$PROJECT_DIR$/接口调试/接口调试.iml" />
       <module fileurl="file://$PROJECT_DIR$/顶部收缩/顶部收缩.iml" filepath="$PROJECT_DIR$/顶部收缩/顶部收缩.iml" />
     </modules>
   </component>

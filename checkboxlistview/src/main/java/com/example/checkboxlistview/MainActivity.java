@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
   // 用来控制CheckBox的选中状况
   private static HashMap<Integer, Boolean> isSelected = new HashMap<>();
   private List<String> mStringList = new ArrayList<>();
+  private boolean hasChoose;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -94,22 +96,30 @@ public class MainActivity extends AppCompatActivity {
       }
       holder.mTextView.setText(name);
       // 监听checkBox并根据原来的状态来设置新的状态
+      final ViewHolder finalHolder = holder;
       holder.mCheckBox.setOnClickListener(new OnClickListener() {
+
         @Override
         public void onClick(View v) {
+          if (hasChoose==true&&isSelected.get(position)==false){
+            Toast.makeText(MainActivity.this,"只能选一个",Toast.LENGTH_SHORT).show();
+            finalHolder.mCheckBox.setChecked(false);
+            return;
+          }
           //判断当前是否选中
           if (isSelected.get(position)) {
             //当前已经选中,设置为未选中
             isSelected.put(position, false);
             setSelected(isSelected);
+            hasChoose=false;
             //添加到选中的集合里面
             mStringList.remove(data.get(position));
           } else {
             isSelected.put(position, true);
             setSelected(isSelected);
+            hasChoose=true;
             //移除选中的条目
             mStringList.add(data.get(position));
-
           }
         }
       });

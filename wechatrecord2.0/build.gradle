@@ -1,20 +1,17 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.kevin.wechatrecord20"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     sourceSets.main{
-
         jniLibs.srcDirs = ['src/jniLibs'];
-
     }
     buildTypes {
         release {
@@ -25,14 +22,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.android.support:support-v4:25.0.0'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.mabeijianxi:small-video-record:1.2.0'
     /*butterknife*/
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    /*视频选择器*/
     testCompile 'junit:junit:4.12'
+    compile project(':CommonRecycler')
 }

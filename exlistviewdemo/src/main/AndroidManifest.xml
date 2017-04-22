@@ -16,6 +16,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".ExListViewActivity"></activity>
+    <activity android:name=".ContactActivity"/>
   </application>
 
 </manifest>

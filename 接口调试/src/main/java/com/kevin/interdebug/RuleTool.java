@@ -8,11 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class RuleTool {
-
-
   private Map<String, String> signMap = new HashMap<>();
-
-
   //获取签名后的数据
   public static String[] getSignData(Map<String, String> map) {
     List<String> dataList = new ArrayList<>();
@@ -33,11 +29,11 @@ public class RuleTool {
       str.append(s + "|");
     }
     Log.i("test", "拼接之后的字符串 ：" + signString);
-    String s="asd%#!123&";
+    String s = "asd%#!123&";
     String md5 = Md5Utils.MD5(s);
     signString.append("&" + md5.toLowerCase());
     String substring = signString.toString().substring(1);
-    Log.i("test",substring);
+    Log.i("test", substring);
     signArray[0] = Md5Utils.MD5(substring).toLowerCase();
     StringBuffer finStr = str.deleteCharAt(str.length() - 1);
     signArray[1] = finStr.toString();
@@ -49,12 +45,7 @@ public class RuleTool {
 
   //清除原来集合
   public static void clearList() {
-//    if (keyList != null && keyList.size() > 0) {
-//      keyList.clear();
-//    }
-//    if (valueList != null && valueList.size() > 0) {
-//      valueList.clear();
-//    }
+
   }
   /*
   * appsecret='从服务器端获取'

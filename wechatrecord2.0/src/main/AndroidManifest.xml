@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.kevin.wechatrecord20">
+  <uses-permission android:name="android.permission.INTERNET" />
 
   <application
     android:allowBackup="true"
@@ -19,6 +20,6 @@
     <activity
       android:name=".VideoPlayerActivity" />
     <activity android:name=".SendSmallVideoActivity"/>
+    <activity android:name=".VideoPickActivity"/>
   </application>
-
 </manifest>

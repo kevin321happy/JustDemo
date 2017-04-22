@@ -63,7 +63,6 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
     PersonDto cuser1 = new PersonDto();
     cuser1.setName("蝗虫");
 
-
     PersonDto cuser2 = new PersonDto();
     cuser2.setName("贝贝");
 
@@ -172,7 +171,6 @@ public class MainActivity extends Activity implements SlideBar.onTouchingLetterC
    */
   private void filterData(String filterStr, List<PersonDto> list) {
     List<PersonDto> filterDateList = new ArrayList<PersonDto>();
-
     if (TextUtils.isEmpty(filterStr)) {
       filterDateList = list;
     } else {

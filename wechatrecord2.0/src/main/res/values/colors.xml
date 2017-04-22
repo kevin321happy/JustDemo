@@ -9,4 +9,11 @@
   <color name="color_4e3d31">#4e3d31</color>
   <color name="grey8">#888888</color>
   <color name="transparent_black_85">#DA000000</color>
+
+  <color name="black">#000000</color>
+  <color name="trans">#00000000</color>
+  <color name="alertdialog_line">#c6c6c6</color>
+  <color name="actionsheet_blue">#03ff29</color>
+  <color name="actionsheet_red">#FD4A2E</color>
+  <color name="actionsheet_gray">#8F8F8F</color>
 </resources>

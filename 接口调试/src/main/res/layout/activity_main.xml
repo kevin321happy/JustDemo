@@ -42,4 +42,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="使用RxOk联网"/>
+  <Button
+    android:id="@+id/bt_jiami"
+    android:onClick="jiami"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Md5加密字符串"/>
 </LinearLayout>

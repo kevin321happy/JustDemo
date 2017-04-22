@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.lzy.okgo.OkGo;
@@ -27,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
   private Map<String, String> mMap = new TreeMap<>();
   //  private String URL="http://admin.52qmct.com:8080/hsWebInterface";
   private String URL = "http://172.16.3.30/";
+  private Button mBt_jiami;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     mTv_content = (TextView) findViewById(R.id.tv_content);
+    mBt_jiami = (Button) findViewById(R.id.bt_jiami);
 //    initParam();
 //    initData();
   }
@@ -150,5 +153,8 @@ public class MainActivity extends AppCompatActivity {
           }
         });
 
+  }
+  public void jiami(View view) {
+    mBt_jiami.setText(Md5Utils.MD5("xiaowenxiang123"));
   }
 }

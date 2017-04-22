@@ -11,10 +11,17 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
   }
 
   //点击跳转到可展开的listview
   public void jump(View view) {
-    startActivity(new Intent(this,ExListViewActivity.class));
+    startActivity(new Intent(this, ExListViewActivity.class));
+  }
+
+  //跳转到联系人界面
+  public void Tocontact(View view) {
+    startActivity(new Intent(MainActivity.this, ContactActivity.class));
+
   }
 }

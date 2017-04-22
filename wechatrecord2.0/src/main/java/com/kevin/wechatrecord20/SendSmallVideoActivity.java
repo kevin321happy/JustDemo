@@ -46,19 +46,18 @@ public class SendSmallVideoActivity extends Activity {
     setContentView(R.layout.activity_recorder);
     ButterKnife.bind(this);
     initData();
-
   }
 
   //初始化
   private void initData() {
     Intent intent = getIntent();
+    //视频录制完成之后获取到的当前视频的参数
     videoUri = intent.getStringExtra(MediaRecorderActivity.VIDEO_URI);
     videoScreenshot = intent.getStringExtra(MediaRecorderActivity.VIDEO_SCREENSHOT);
     Bitmap bitmap = BitmapFactory.decodeFile(videoScreenshot);
     mIvVideoScreenshot.setImageBitmap(bitmap);
     mEtSendContent.setHint("视频的地址为 ：" + videoUri);
   }
-
   @OnClick({R.id.tv_cancel, R.id.tv_send, R.id.iv_video_screenshot})
   public void onClick(View view) {
     switch (view.getId()) {

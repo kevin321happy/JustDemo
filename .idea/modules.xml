@@ -3,28 +3,52 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" filepath="$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" filepath="$PROJECT_DIR$/CommonRecycler/CommonRecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersonDemo.iml" filepath="$PROJECT_DIR$/PersonDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Study.iml" filepath="$PROJECT_DIR$/Study.iml" />
       <module fileurl="file://$PROJECT_DIR$/android设备信息/android设备信息.iml" filepath="$PROJECT_DIR$/android设备信息/android设备信息.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android设备信息/android设备信息.iml" filepath="$PROJECT_DIR$/android设备信息/android设备信息.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backgrounddownload/backgrounddownload.iml" filepath="$PROJECT_DIR$/backgrounddownload/backgrounddownload.iml" />
       <module fileurl="file://$PROJECT_DIR$/backgrounddownload/backgrounddownload.iml" filepath="$PROJECT_DIR$/backgrounddownload/backgrounddownload.iml" />
       <module fileurl="file://$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" filepath="$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" filepath="$PROJECT_DIR$/checkboxlistview/checkboxlistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactslist/contactslist.iml" filepath="$PROJECT_DIR$/contactslist/contactslist.iml" />
       <module fileurl="file://$PROJECT_DIR$/contactslist/contactslist.iml" filepath="$PROJECT_DIR$/contactslist/contactslist.iml" />
       <module fileurl="file://$PROJECT_DIR$/crosstimeline/crosstimeline.iml" filepath="$PROJECT_DIR$/crosstimeline/crosstimeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crosstimeline/crosstimeline.iml" filepath="$PROJECT_DIR$/crosstimeline/crosstimeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" filepath="$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" />
       <module fileurl="file://$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" filepath="$PROJECT_DIR$/custommultiexpand/custommultiexpand.iml" />
       <module fileurl="file://$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" filepath="$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" filepath="$PROJECT_DIR$/exlistviewdemo/exlistviewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frescodemo/frescodemo.iml" filepath="$PROJECT_DIR$/frescodemo/frescodemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/frescodemo/frescodemo.iml" filepath="$PROJECT_DIR$/frescodemo/frescodemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/getdeviceinfo/getdeviceinfo.iml" filepath="$PROJECT_DIR$/getdeviceinfo/getdeviceinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getdeviceinfo/getdeviceinfo.iml" filepath="$PROJECT_DIR$/getdeviceinfo/getdeviceinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greendaodemo/greendaodemo.iml" filepath="$PROJECT_DIR$/greendaodemo/greendaodemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/greendaodemo/greendaodemo.iml" filepath="$PROJECT_DIR$/greendaodemo/greendaodemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" filepath="$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" filepath="$PROJECT_DIR$/imagematrixdemo/imagematrixdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/permission60/permission60.iml" filepath="$PROJECT_DIR$/permission60/permission60.iml" />
+      <module fileurl="file://$PROJECT_DIR$/permission60/permission60.iml" filepath="$PROJECT_DIR$/permission60/permission60.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" filepath="$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" filepath="$PROJECT_DIR$/wechatrecord2.0/wechatrecord2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" filepath="$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" />
+      <module fileurl="file://$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" filepath="$PROJECT_DIR$/仿微信视频拍摄/仿微信视频拍摄.iml" />
+      <module fileurl="file://$PROJECT_DIR$/后台下载/后台下载.iml" filepath="$PROJECT_DIR$/后台下载/后台下载.iml" />
       <module fileurl="file://$PROJECT_DIR$/后台下载/后台下载.iml" filepath="$PROJECT_DIR$/后台下载/后台下载.iml" />
       <module fileurl="file://$PROJECT_DIR$/接口调试/接口调试.iml" filepath="$PROJECT_DIR$/接口调试/接口调试.iml" />
+      <module fileurl="file://$PROJECT_DIR$/接口调试/接口调试.iml" filepath="$PROJECT_DIR$/接口调试/接口调试.iml" />
+      <module fileurl="file://$PROJECT_DIR$/顶部收缩/顶部收缩.iml" filepath="$PROJECT_DIR$/顶部收缩/顶部收缩.iml" />
       <module fileurl="file://$PROJECT_DIR$/顶部收缩/顶部收缩.iml" filepath="$PROJECT_DIR$/顶部收缩/顶部收缩.iml" />
     </modules>
   </component>
